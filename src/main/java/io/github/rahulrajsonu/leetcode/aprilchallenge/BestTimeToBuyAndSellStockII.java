@@ -2,12 +2,6 @@ package io.github.rahulrajsonu.leetcode.aprilchallenge;
 
 public class BestTimeToBuyAndSellStockII {
 
-  public static void main(String[] args) {
-    System.out.println(7==maxProfit(new int[]{7,1,5,3,6,4}));
-    System.out.println(4==maxProfit(new int[]{1,2,3,4,5}));
-    System.out.println(0==maxProfit(new int[]{7,6,4,3,1}));
-  }
-
   /**
    * Say you have an array prices for which the ith element is the price of a given stock on day i.
    *
@@ -43,9 +37,8 @@ public class BestTimeToBuyAndSellStockII {
   public static int maxProfit(int[] prices) {
     int profit = 0;
     for (int m = 1; m < prices.length; m++) {
-      if(prices[m] > prices[m-1]){
-        profit+=prices[m]-prices[m-1];
-      }
+      if(prices[m] > prices[m-1])
+        profit+=(prices[m]-prices[m-1]);
     }
     return profit;
   }
