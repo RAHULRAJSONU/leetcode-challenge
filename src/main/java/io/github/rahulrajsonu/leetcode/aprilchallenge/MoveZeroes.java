@@ -2,16 +2,6 @@ package io.github.rahulrajsonu.leetcode.aprilchallenge;
 
 public class MoveZeroes {
 
-  public static void main(String[] args) {
-    int[] arr = {0,0,0,2,0,1,0,3,12,0,0,0,0,1,0,0};
-//    int[] arr = {2,0,1,0,3,12,0,0,0,0,1};
-//    int[] arr = {0,1,0,3,12};
-    moveZeroes(arr);
-    for (int el : arr) {
-      System.out.print(el+" ");
-    }
-  }
-
   /**
    * Given an array nums, write a function to move all 0's to the end of it,
    * while maintaining the relative order of the non-zero elements.
