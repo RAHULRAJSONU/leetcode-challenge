@@ -3,8 +3,9 @@ package io.github.rahulrajsonu.leetcode.aprilchallenge;
 public class MoveZeroes {
 
   public static void main(String[] args) {
+    int[] arr = {0,0,0,2,0,1,0,3,12,0,0,0,0,1,0,0};
 //    int[] arr = {2,0,1,0,3,12,0,0,0,0,1};
-    int[] arr = {0,1,0,3,12};
+//    int[] arr = {0,1,0,3,12};
     moveZeroes(arr);
     for (int el : arr) {
       System.out.print(el+" ");
@@ -26,14 +27,14 @@ public class MoveZeroes {
    * @param nums
    */
   public static void moveZeroes(int[] nums) {
-    int idxOfZero = 0;
+    int zeroIdx = 0;
     for (int m = 1; m < nums.length; m++) {
-      if(nums[idxOfZero]== 0 && nums[m]!=0){
-        nums[idxOfZero] = nums[m];
-        nums[m]=0;
-        idxOfZero++;
-      }else if(nums[idxOfZero]!=0){
-        idxOfZero++;
+      if(nums[zeroIdx]==0 && nums[m]!=0){
+        nums[zeroIdx] = nums[m];
+        nums[m] = 0;
+        zeroIdx++;
+      }else if(nums[zeroIdx] != 0){
+        zeroIdx++;
       }
     }
   }
