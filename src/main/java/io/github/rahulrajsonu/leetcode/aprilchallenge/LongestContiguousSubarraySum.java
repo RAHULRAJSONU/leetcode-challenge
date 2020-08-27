@@ -7,7 +7,7 @@ public class LongestContiguousSubarraySum {
 
   public static void main(String[] args) {
     int[] arr = {-2,1,-3,4,-1,2,1,-5,4};
-    System.out.println(maxSubArrayWithIdx(arr));
+    System.out.println(maxSubArray(arr));
   }
 
   /**
@@ -23,18 +23,16 @@ public class LongestContiguousSubarraySum {
    * @return
    */
   public static int maxSubArray(int[] nums) {
-    int maxEnding = 0;
-    int maxSoFar = Integer.MIN_VALUE;
+    int meh = 0;
+    int msf = Integer.MIN_VALUE;
     for (int m = 0; m < nums.length; m++) {
-      maxEnding+=nums[m];
-      if(nums[m] > maxEnding){
-        maxEnding = nums[m];
-      }
-      if(maxSoFar < maxEnding){
-        maxSoFar = maxEnding;
-      }
+      meh+=nums[m];
+      if(meh<nums[m])
+        meh=nums[m];
+      if(meh>msf)
+        msf=meh;
     }
-    return maxSoFar;
+    return msf;
   }
 
   public static int maxSubArrayWithIdx(int[] nums) {
